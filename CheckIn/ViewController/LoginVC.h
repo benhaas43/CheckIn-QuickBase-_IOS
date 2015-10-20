@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginVC.h
 //  CheckIn
 //
 //  Created by heliumsoft on 8/25/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LoginVC : UIViewController
 
 @end
-

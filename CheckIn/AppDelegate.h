@@ -12,6 +12,12 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) NSMutableArray * project_Workers;
+@property (strong, nonatomic) NSMutableArray * workers;
+@property (strong, nonatomic) NSString * currentProject_ID;
+
+@property (strong, nonatomic) Project * currentProject;
+@property (strong, nonatomic) Worker * currentWorker;
 
 @end
 
