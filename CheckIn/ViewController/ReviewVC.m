@@ -104,7 +104,7 @@
     
     NSString * query = [NSString stringWithFormat:@"{'%@'.EX.'%@'}AND{'%@'.IR.'%@'}",FIELD_CHECK_IN_PROJECT_FID, APP.currentProject.projectID, FIELD_CHECK_IN_START_TIME_FID, [self getDateStr:currentDate]]; // Current Project ID
     
-    NSString * clist = [NSString stringWithFormat:@"3.%@.%@.%@.%@.%@.%@.%@.%@.%@",FIELD_CHECK_IN_WORKER_FID,FIELD_CHECK_IN_EMPLOYEE_NAME_FID,FIELD_CHECK_IN_START_TIME_FID, FIELD_CHECK_IN_END_TIME_FID, FIELD_CHECK_IN_PIC_START_FID, FIELD_CHECK_IN_PIC_END_FID, FIELD_CHECK_OUT_FLAG_FID, FIELD_CHECK_IN_COST_CODE_FID];
+    NSString * clist = [NSString stringWithFormat:@"3.%@.%@.%@.%@.%@.%@.%@.%@",FIELD_CHECK_IN_WORKER_FID,FIELD_CHECK_IN_EMPLOYEE_NAME_FID,FIELD_CHECK_IN_START_TIME_FID, FIELD_CHECK_IN_END_TIME_FID, FIELD_CHECK_IN_PIC_START_FID, FIELD_CHECK_IN_PIC_END_FID, FIELD_CHECK_OUT_FLAG_FID, FIELD_CHECK_IN_COST_CODE_FID];
 
     [workerTableView reloadData];
     
@@ -173,6 +173,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     WorkerDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"workerDetailCell"];
     
     cell.delegate = self;
@@ -192,10 +193,12 @@
 
     return 0;
 }
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
+
 
 #pragma mark WorkerDetailCell Delegate
 
@@ -245,6 +248,10 @@
     return [costCodes objectAtIndex:row];
 }
 
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
 
 #pragma mark CostCode Action
 

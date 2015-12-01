@@ -171,7 +171,7 @@
 
 -(void)getWorkersFromClockIn{
     
-    NSString * query = [NSString stringWithFormat:@"{'446'.EX.'%@'}AND{'450'.IR.'today'}",self.project.projectID]; // Current Project ID
+    NSString * query = [NSString stringWithFormat:@"{'%@'.EX.'%@'}AND{'%@'.IR.'today'}",FIELD_CHECK_IN_PROJECT_FID, self.project.projectID, FIELD_CHECK_IN_DATE_FID]; // Current Project ID
    
     // ci , Project ID = 446, Project Name = 458  Worker ID = 447, Start time = 450 End time = 449 Pic start =455  Pict End time = 456, ciHourWorked = 451, Checkout Flag = 448, cost code = 454 , employee name 129
     

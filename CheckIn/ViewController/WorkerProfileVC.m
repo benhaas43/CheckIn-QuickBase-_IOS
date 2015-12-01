@@ -262,8 +262,8 @@
     [recordDic setObject:[Worker fetchDateTimeStrWithEDT:self.worker.startTime] forKey:FIELD_CHECK_IN_START_TIME_FID];
     [recordDic setObject:[Worker fetchTimeStrWithEDT:self.worker.picStartTime] forKey:FIELD_CHECK_IN_PIC_START_FID];
     
-    [recordDic setObject:self.worker.workerID forKey:FIELD_EMPLOYEE_ID_FID];
-    [recordDic setObject:APP.currentProject.projectID forKey:FIELD_PROJECT_ID_FID];
+//    [recordDic setObject:self.worker.workerID forKey:FIELD_EMPLOYEE_ID_FID];
+//    [recordDic setObject:APP.currentProject.projectID forKey:FIELD_PROJECT_ID_FID];
 
     [recordDic setObject:self.worker.startPic forKey:FIELD_CHECK_IN_PIC_FID];
     
@@ -318,7 +318,7 @@
     [recordDic setObject:[Worker fetchTimeStrWithEDT:self.worker.picEndTime] forKey:FIELD_CHECK_IN_PIC_END_FID]; // Pic End Time
     [recordDic setObject:@"1" forKey:FIELD_CHECK_OUT_FLAG_FID];  // Check Out Flag
     [recordDic setObject:self.worker.endPic forKey:FIELD_CHECK_OUT_PIC_FID];   // Pic End Pic
-    [recordDic setObject:[self fetchHourWorked] forKey:FIELD_CHECK_IN_HOURWORKED_FID]; // HourWorked
+ //   [recordDic setObject:[self fetchHourWorked] forKey:FIELD_CHECK_IN_HOURWORKED_FID]; // HourWorked
     
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Check Out...";

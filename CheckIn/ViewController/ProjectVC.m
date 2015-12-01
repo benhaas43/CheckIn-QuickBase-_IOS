@@ -200,7 +200,7 @@
 {
     [searchBar setShowsCancelButton:YES];
     isSearchMode = YES;
-    searchArray = projectArray;r
+    searchArray = projectArray;
     return YES;
 }
 

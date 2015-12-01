@@ -139,7 +139,7 @@
     
     [recordDic setObject:[Worker fetchDateTimeStrWithEDT:self.worker.startTime] forKey:FIELD_CHECK_IN_START_TIME_FID]; // Start Time
     [recordDic setObject:[Worker fetchDateTimeStrWithEDT:self.worker.endTime] forKey:FIELD_CHECK_IN_END_TIME_FID]; // End Time
-    [recordDic setObject:[self fetchHourWorked] forKey:FIELD_CHECK_IN_HOURWORKED_FID]; // HourWorked
+ //   [recordDic setObject:[self fetchHourWorked] forKey:FIELD_CHECK_IN_HOURWORKED_FID]; // HourWorked
     
     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Saving...";
